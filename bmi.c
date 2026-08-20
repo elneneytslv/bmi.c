@@ -4,11 +4,22 @@ int main(void) {
 	
 	float Kg, h, bmi;
 	
-	printf("Ingrese el peso en kg: ");
-	scanf("%f", &Kg);
+	do {
+		printf("Ingrese el peso en kg: ");
+		scanf("%f", &Kg);
+		if (Kg <= 0) {
+			printf("Error: El peso debe ser un número positivo.\n");
+		}
+	} while (Kg <= 0);
 	
-	printf("Ingrese la altura en mts: ");
-	scanf("%f", &h);
+	// Validar que la altura sea un número positivo
+	do {
+		printf("Ingrese la altura en metros: ");
+		scanf("%f", &h);
+		if (h <= 0) {
+			printf("Error: La altura debe ser un número positivo.\n");
+		}
+	} while (h<= 0);
 	
 	bmi = Kg / (h * h);
 	
@@ -31,5 +42,6 @@ int main(void) {
 	} else {
 		printf("Obesidad\n");
 	}
+
 	return 0;
 }
