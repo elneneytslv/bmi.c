@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+ //https://github.com/elneneytslv/bmi.c/blob/a794aa1f5a3b23311cd75c68c90713d9fffcae7c/bmi.c
 int main(void) {
 	
 	float Kg, h, bmi;
@@ -11,8 +11,7 @@ int main(void) {
 			printf("Error: El peso debe ser un número positivo.\n");
 		}
 	} while (Kg <= 0);
-	
-	// Validar que la altura sea un número positivo
+
 	do {
 		printf("Ingrese la altura en metros: ");
 		scanf("%f", &h);
